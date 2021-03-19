@@ -35,7 +35,6 @@ class Product:
                 soup = BeautifulSoup(page.content, "html.parser")
                 title_html = soup.find(id="productTitle")
                 price_html = soup.find(id="priceblock_ourprice")
-
             title = title_html.get_text().strip()
             price_str = price_html.get_text().strip()
             price = float_from_currency_str(price_str, '.')

@@ -3,7 +3,6 @@ import json
 
 accounts_path = './data/accounts.json'
 
-
 def get_target_account(email):
     target_account = None
     with open(accounts_path, "r+") as f:
@@ -50,7 +49,7 @@ def send_mail(urls, email):
     server.starttls()
     server.ehlo()
 
-    server.login('originjdel@gmail.com', 'oqyriwifawroqvvv')
+    server.login('throwaway.47192883@gmail.com', 'oqyriwifawroqvvv')
     subject = 'price fell down'
     body = 'check the amazon links:' + " ".join(urls_to_send)
 
